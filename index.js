@@ -6,7 +6,8 @@ const app = express();
 
 mongoose.connect('mongodb://localhost/freelancedb', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true
 });
 mongoose.Promise = global.Promise;
 

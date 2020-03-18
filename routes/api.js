@@ -3,7 +3,9 @@ const router = express.Router();
 const Freelancer = require('../models/freelancer');
 
 router.get('/freelancers', (req, res, next) => {
-  res.send({ type: 'GET' });
+  Freelancer.find({}).then(freelancers => {
+    res.send(freelancers);
+  });
 });
 
 router.post('/freelancers', (req, res, next) => {

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const GeoLocation = require('./geolocation');
 
 const FreelancerSchema = new Schema({
   name: {
@@ -12,7 +13,8 @@ const FreelancerSchema = new Schema({
   available: {
     type: Boolean,
     default: false
-  }
+  },
+  geometry: new GeoLocation()
 });
 
 const Freelancer = mongoose.model('freelancer', FreelancerSchema);
