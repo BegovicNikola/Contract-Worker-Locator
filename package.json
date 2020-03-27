@@ -6,7 +6,8 @@
   "author": "Bega",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon index.js",
+    "debug": "nodemon --inspect-brk index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
